@@ -216,6 +216,10 @@ class Lesson {
         Integer n = Integer.parseInt(numberso);
         System.out.println(n * 12);
 
+        int[] numbersArray = {1,2,3,5,6,7,8};
+        System.out.println(numbersArray[2]);
+        
+
 
     }
 }
