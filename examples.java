@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 
 class Overload { 
 
@@ -56,6 +58,22 @@ class Memory
 }
 
 
+class Statico {
+
+    private static int startupNumbers = 19;
+
+    public void Statico()
+    {
+        System.out.println(startupNumbers++);
+    }
+
+    public int returnStatic()
+    {
+        return startupNumbers;
+    }
+
+}
+
 
 public class examples {
     
@@ -84,13 +102,57 @@ public class examples {
 
         m.names = "jack";
         me.names = "jorge";
+        System.out.println(m == me  );
+
+
+        int[] sayi = new int[4];
+        sayi[0] = 2;
+        System.out.println(sayi[0]);
+
+
+        String[] isim = new String[8];
+        isim[2] = "azad";
+        System.out.println(isim[2]);
+
+        int[] arrays = {1,2,3,5,6,7,8,98,112};
+
         
+        //iterating over dynamic list 
+        List<Integer> col = new ArrayList<>();
+        col.add(2);
+
+        List<String> schools = new ArrayList<>();
+        schools.add("regys college");
+        schools.add("harward");
+        schools.add("mit");
+        schools.add("standford");
+        schools.remove(1);
+        System.out.println(schools.get(1));
+
+        for (String s : schools)
+        {   
+            System.out.println(s);
+
+        }
+
+        for (int s = 0; s < schools.size(); s++)
+        {
+            System.out.println(schools.remove(s));
+
+        }
 
 
 
+        Statico st1 = new Statico();
+        Statico st2 = new Statico();
+        Statico st3 = new Statico();
 
-        System.out.println(m == me);
 
+        st1.Statico();
+        st2.Statico();
+        st3.Statico();
+        st1.Statico();
+        
 
         
     }

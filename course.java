@@ -1,3 +1,6 @@
+import nothing.*;
+import packages.*;
+
 
 class Person { 
 
@@ -41,6 +44,7 @@ class Azad {
         System.out.println("this is Azad constructor default");
     }
 
+    
     public Azad(String name)
     {
     System.out.println("This is Azad constructor parameterized");
@@ -64,6 +68,17 @@ class Silo extends Azad {
     }
 }
 
+
+class Package 
+{
+    public Package()
+    {
+
+        System.out.println("this is package class ha");
+    }
+
+}
+
 class Lesson { 
 
     public static void main (String azad[]) { 
@@ -84,7 +99,7 @@ class Lesson {
 
         boolean c = a < b;
         boolean d = a > b;
-        boolean e = a != b;
+        boolean f = a != b;
         System.out.println(c);
 
         //switch case so break is important here because in switch case method when condition met it will execute rest of the code
@@ -99,7 +114,7 @@ class Lesson {
             case 'd': 
                 System.out.println("this is very interesting");
                 break;
-            case 'e':
+            case 'f':
                 System.out.println("this is very strange");
                 break;
             default: 
@@ -218,7 +233,36 @@ class Lesson {
 
         int[] numbersArray = {1,2,3,5,6,7,8};
         System.out.println(numbersArray[2]);
+
+
         
+        //importing and exporting in java 
+        Package pe = new Package();
+
+
+        mcpackage1 pack = new mcpackage1();
+
+
+        // try and catch block in java to catch errors 
+
+
+        int numsArr[] = new int[6];
+
+        numsArr[0] = 1;
+        System.out.println(numsArr[0]);
+
+        try 
+        {
+            System.out.print(numsArr[8]);
+        }
+        catch(Exception e)
+        {
+            System.out.println("out of array bond error" + e);
+
+        }
+
+        System.out.print(" even errro occurs code does continoues to execute");
+
 
 
     }
