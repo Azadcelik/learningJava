@@ -21,9 +21,6 @@ class Func {
         
     A obj = () -> System.out.println("this is syntactic sugar and better way");
     obj.display();
-
-
-
         }
     
 }
