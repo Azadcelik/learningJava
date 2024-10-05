@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.*;
 import java.util.function.*;
-
+import java.util.stream.Stream;
 class Teams 
 {
     String name;
@@ -87,7 +87,21 @@ class Lesson11 {
         Consumer <Integer> m = k -> System.out.println(k);
 
         numbeers.forEach(m);
-        
+
+        // Stream<Integer> a = numbeers.stream();
+
+        // Stream<Integer> a2 = a.filter(k -> k % 3 == 0);
+        // int result = a2.reduce(0, (d,e) -> d + e);
+        // a2.forEach(k -> System.out.println(k));
+        // System.out.println(result);
+
+
+       int result2 =  numbeers.stream()
+        .filter(n -> n % 3 == 0)
+        .map(n -> n + 101)
+        .reduce(0, (y,z) -> y + z);
+
+        System.out.println(result2);
     
     }
 }
