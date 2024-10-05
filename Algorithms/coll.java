@@ -3,6 +3,8 @@ package Algorithms;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.*;
+import java.util.function.*;
 
 class Teams 
 {
@@ -70,6 +72,23 @@ class Lesson11 {
             System.out.println(club);
         }
 
+
+        List<Integer> numbeers = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
         
+        for (int n : numbeers)
+        {
+           if (n % 2 == 0) n = n * 2;
+           else n = n  / 2;
+
+           System.out.println(n);
+        }
+
+
+        Consumer <Integer> m = k -> System.out.println(k);
+
+        numbeers.forEach(m);
+        
+    
     }
 }
+
